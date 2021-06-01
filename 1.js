@@ -2,8 +2,8 @@
 
 const productsShopping =  [
 	{  id : 1 ,  title : 'Mango People T-shirt' ,  price : 150  } ,
-	{  id : 2 , title : 'Mango People T-shirt' , price : 150   } ,
-	{  id : 3 , title : 'Mango People T-shirt' ,  price : 150  } ,
+
+	
 ] ;
 
 const renderShoppingItem = (title, price) => {
@@ -29,11 +29,8 @@ const renderShoppingItem = (title, price) => {
  
  const renderShoppingList = list => {
 	let shoppingList = list.map(item => renderShoppingItem(item.title, item.price))
- 
-
- 
-	document.querySelector('.shopping-c-productde').innerHTML = shoppingList
- 
+	
+	document.querySelector('.shopping-c-productde').innerHTML = shoppingList.join('');
  };
 
 const init = () => {
